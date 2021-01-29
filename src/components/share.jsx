@@ -10,6 +10,7 @@ const Share=()=>{
     let uploadTo=(e)=>{
         let file=e.target;
         let fileTo=file.files[0];
+        let fileNames=fileTo.name;
             //let match for the pattern 
             let pattern=new RegExp(/\.pdf/)
                 if(fileTo.name.match(pattern)){
@@ -18,8 +19,8 @@ const Share=()=>{
 
                     //now set the msg for the uploaaded files 
                     setUpload(fileTo.name)
-                    let storageRef=firebase.storage().ref(`uploads/${fileTo}`)
-                    let store=storageRef.put(fileTo.name)
+                    let storageRef=firebase.storage().ref(`uploads/${fileNames}`)
+                    let store=storageRef.put(fileTo)
                     console.log(store);
                     store.on('state_change',snapshot=>{
                         console.log('uploaed to firebase ');
