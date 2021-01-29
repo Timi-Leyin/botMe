@@ -20,6 +20,10 @@ const Share=()=>{
                     setUpload(fileTo.name)
                     let storageRef=firebase.storage().ref(`uploads/${fileTo}`)
                     let store=storageRef.put(fileTo.name)
+                    console.log(store);
+                    store.on('state_change',snapshot=>{
+                        console.log('uploaed to firebase ');
+                    })
 
                     //now upload to firebase 
 
