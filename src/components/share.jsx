@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {MdArrowBack} from "react-icons/md";
 import {Link} from 'react-router-dom'
 import { Container , Button , Card , Badge ,CardBody,BreadcrumbItem,Breadcrumb} from 'reactstrap'
+import firebase from './firebase'
 const Share=()=>{
     let [upload , setUpload]=useState('')
     let [msg , setMsg]=useState('')
@@ -17,7 +18,7 @@ const Share=()=>{
 
                     //now set the msg for the uploaaded files 
                     setUpload(fileTo.name)
-                    let storageRef=firebase.storagage().ref(`uploads/${fileTo}`)
+                    let storageRef=firebase.storage().ref(`uploads/${fileTo}`)
                     let store=storageRef.put(fileTo.name)
 
                     //now upload to firebase 
