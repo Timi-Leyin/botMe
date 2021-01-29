@@ -1,0 +1,293 @@
+$special: #7077f0c5;
+$top: #4147b3c5;
+$col: #3d42ad;
+$color2: #191b47;
+$col3: #2f3487;
+$col4: #3d42ad;
+$twit: rgb(107, 125, 140);
+$bg: rgba(128, 128, 128, 0.507);
+$bh: rgba(27, 27, 27, 0.89);
+$bread:#e9ecef;
+.details {
+  display: flex;
+}
+.bread {
+  padding: 2em 0;
+}
+.hold {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  .middle {
+    font-size: 20px;
+
+    .btn {
+      margin: 1.5em;
+      padding: 1em;
+      background-color: $col;
+      width: 50%;
+    }
+  }
+}
+.middles {
+  height: 100vh;
+  // border: 1px solid grey;
+
+  //header part
+  header {
+    background-color: $top;
+    height: 18em;
+    border-radius: 0 0 25px 25px;
+    color: white;
+  }
+
+  h6 {
+    font-size: 3em;
+    cursor: pointer;
+  }
+  .emo {
+    font-size: 35px;
+  }
+}
+
+.top {
+  background-color: $top;
+  border-radius: 2.5em 2.5px 0 0;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    color: white;
+  }
+}
+//now for the bot msg
+.botMsg {
+  background-color: $bread;
+  border-radius: 4px;
+  width: 40%;
+  margin-top: 3em;
+  padding: 1em;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+//features
+.features {
+  padding: 3em 1em;
+  box-shadow: 2px 3px 9px rgba(165, 165, 165, 0.267);
+}
+
+.card-1 {
+  color: grey;
+  border-radius: 15px;
+
+  .titleName {
+    font-weight: 450;
+    font-size: 16px;
+    color: green;
+    font-weight: 500;
+  }
+}
+.card-2 {
+  color: rgba(0, 0, 255, 0.137);
+  border-radius: 18px;
+  svg {
+    font-size: 28px;
+    color: #191b47;
+  }
+  .titleName {
+    color: #191b47;
+    font-weight: 500;
+  }
+}
+
+.parent {
+  background-color: #fff;
+}
+
+.card {
+  // box-shadow: 2px 3px 9px rgba(92, 92, 92, 0);
+  border-radius: 18px;
+  background-color: #e9ecef;
+  border: none;
+}
+//side bar
+
+.sidebar {
+  background-color: $color2;
+  position: absolute;
+  left: 0;
+  width: 40%;
+  height: 100vh;
+  z-index: 1;
+  color: white;
+  padding-left: 1em;
+  padding-top: 2em;
+  opacity: 0.9;
+  transition: ease-in 2.5s;
+  transition-delay: 4s;
+  backdrop-filter: blur(90px);
+  //display: none;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      margin-top: 9em;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+  //now for the cancel button
+  h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    float: right;
+    padding-right: 1em;
+    cursor: pointer;
+  }
+}
+//now this is the footer aspect
+
+footer {
+  position: fixed;
+  bottom: 0%;
+
+  .inside {
+    position: absolute;
+    bottom: 0%;
+  }
+
+  .inbox {
+    width: 25em;
+  }
+  h5 {
+    position: absolute;
+    top: 47px;
+    right: 1em;
+    cursor: pointer;
+    font-size: 22px;
+    color: $special;
+  }
+}
+
+.mess {
+  color: white;
+  float: right;
+  clear: both;
+  background-color: #7077f0c5;
+  width: auto;
+  padding: 0.5em 1em;
+  border-radius: 8px 8px 0 8px;
+  margin-top: 2em;
+}
+
+.red {
+  float: left;
+  clear: both;
+  background-color: $bread;
+  width: auto;
+  padding: 1em 1em;
+  border-radius: 8px 8px 8px 0;
+  margin-top: 6px;
+  font-size: 14px;
+  margin-top: 2em;
+}
+
+.svg {
+  cursor: pointer;
+}
+
+//doctor part
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+}
+//doctor block
+#doctor {
+  background-color: $col4;
+  backdrop-filter: blur(50px);
+  margin-bottom: 20px;
+  color: white;
+}
+
+//meet people
+.meet {
+  position: fixed;
+  top: 0;
+}
+//cad
+.cad .card {
+  height: 9em;
+  margin-top: 3em;
+  cursor: pointer;
+  box-shadow: 1px 3px 5px rgba(128, 128, 128, 0.192);
+}
+.down {
+  margin-top: 2em;
+  height: 8em;
+  background-color: rgba(47, 77, 209, 0.541);
+  backdrop-filter: blur(40px);
+  color: white;
+  box-shadow: 1px 1px 8px 1px rgba(128, 128, 128, 0.589);
+}
+//error part
+.err {
+  color: red;
+}
+//sucess
+.loadMsg {
+  color: green;
+}
+
+//footer btn
+.upload-btn {
+  color: red;
+  right: 2em;
+}
+
+label {
+  font-weight: bold;
+  float: right;
+  right: 4em;
+}
+
+.click {
+  color: white;
+  display: none;
+}
+
+/* on small phones hide the other columns */
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .first,
+  .last {
+    display: none;
+  }
+  .click {
+    color: white;
+    display: block;
+  }
+  .top {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    margin: 0%;
+    width: 100%;
+    height: 50px;
+    h4 {
+      color: $special;
+    }
+    a {
+      color: $special;
+    }
+    h6 {
+      color: $special;
+    }
+  }
+}

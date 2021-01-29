@@ -1,0 +1,307 @@
+.details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bread {
+  padding: 2em 0;
+}
+
+.hold {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hold .middle {
+  font-size: 20px;
+}
+
+.hold .middle .btn {
+  margin: 1.5em;
+  padding: 1em;
+  background-color: #3d42ad;
+  width: 50%;
+}
+
+.middles {
+  height: 100vh;
+}
+
+.middles header {
+  background-color: #4147b3c5;
+  height: 18em;
+  border-radius: 0 0 25px 25px;
+  color: white;
+}
+
+.middles h6 {
+  font-size: 3em;
+  cursor: pointer;
+}
+
+.middles .emo {
+  font-size: 35px;
+}
+
+.top {
+  background-color: #4147b3c5;
+  border-radius: 2.5em 2.5px 0 0;
+}
+
+.top div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+  color: white;
+}
+
+.botMsg {
+  background-color: #e9ecef;
+  border-radius: 4px;
+  width: 40%;
+  margin-top: 3em;
+  padding: 1em;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.features {
+  padding: 3em 1em;
+  -webkit-box-shadow: 2px 3px 9px rgba(165, 165, 165, 0.267);
+          box-shadow: 2px 3px 9px rgba(165, 165, 165, 0.267);
+}
+
+.card-1 {
+  color: grey;
+  border-radius: 15px;
+}
+
+.card-1 .titleName {
+  font-weight: 450;
+  font-size: 16px;
+  color: green;
+  font-weight: 500;
+}
+
+.card-2 {
+  color: rgba(0, 0, 255, 0.137);
+  border-radius: 18px;
+}
+
+.card-2 svg {
+  font-size: 28px;
+  color: #191b47;
+}
+
+.card-2 .titleName {
+  color: #191b47;
+  font-weight: 500;
+}
+
+.parent {
+  background-color: #fff;
+}
+
+.card {
+  border-radius: 18px;
+  background-color: #e9ecef;
+  border: none;
+}
+
+.sidebar {
+  background-color: #191b47;
+  position: absolute;
+  left: 0;
+  width: 40%;
+  height: 100vh;
+  z-index: 1;
+  color: white;
+  padding-left: 1em;
+  padding-top: 2em;
+  opacity: 0.9;
+  -webkit-transition: ease-in 2.5s;
+  transition: ease-in 2.5s;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-backdrop-filter: blur(90px);
+          backdrop-filter: blur(90px);
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  margin-top: 9em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sidebar h3 {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  float: right;
+  padding-right: 1em;
+  cursor: pointer;
+}
+
+footer {
+  position: fixed;
+  bottom: 0%;
+}
+
+footer .inside {
+  position: absolute;
+  bottom: 0%;
+}
+
+footer .inbox {
+  width: 25em;
+}
+
+footer h5 {
+  position: absolute;
+  top: 47px;
+  right: 1em;
+  cursor: pointer;
+  font-size: 22px;
+  color: #7077f0c5;
+}
+
+.mess {
+  color: white;
+  float: right;
+  clear: both;
+  background-color: #7077f0c5;
+  width: auto;
+  padding: 0.5em 1em;
+  border-radius: 8px 8px 0 8px;
+  margin-top: 2em;
+}
+
+.red {
+  float: left;
+  clear: both;
+  background-color: #e9ecef;
+  width: auto;
+  padding: 1em 1em;
+  border-radius: 8px 8px 8px 0;
+  margin-top: 6px;
+  font-size: 14px;
+  margin-top: 2em;
+}
+
+.svg {
+  cursor: pointer;
+}
+
+.head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5em 1em;
+}
+
+#doctor {
+  background-color: #3d42ad;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  margin-bottom: 20px;
+  color: white;
+}
+
+.meet {
+  position: fixed;
+  top: 0;
+}
+
+.cad .card {
+  height: 9em;
+  margin-top: 3em;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 3px 5px rgba(128, 128, 128, 0.192);
+          box-shadow: 1px 3px 5px rgba(128, 128, 128, 0.192);
+}
+
+.down {
+  margin-top: 2em;
+  height: 8em;
+  background-color: rgba(47, 77, 209, 0.541);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  color: white;
+  -webkit-box-shadow: 1px 1px 8px 1px rgba(128, 128, 128, 0.589);
+          box-shadow: 1px 1px 8px 1px rgba(128, 128, 128, 0.589);
+}
+
+.err {
+  color: red;
+}
+
+.loadMsg {
+  color: green;
+}
+
+.upload-btn {
+  color: red;
+  right: 2em;
+}
+
+label {
+  font-weight: bold;
+  float: right;
+  right: 4em;
+}
+
+.click {
+  color: white;
+  display: none;
+}
+
+/* on small phones hide the other columns */
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .first,
+  .last {
+    display: none;
+  }
+  .click {
+    color: white;
+    display: block;
+  }
+  .top {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    margin: 0%;
+    width: 100%;
+    height: 50px;
+  }
+  .top h4 {
+    color: #7077f0c5;
+  }
+  .top a {
+    color: #7077f0c5;
+  }
+  .top h6 {
+    color: #7077f0c5;
+  }
+}
+/*# sourceMappingURL=main.css.map */
