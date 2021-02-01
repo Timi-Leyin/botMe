@@ -1,9 +1,27 @@
-import React, {useState} from 'react';
+import React, {useState , useEffect } from 'react';
 import { Row , Col , Container , Card ,CardBody } from 'reactstrap'
 import {MdArrowBack} from "react-icons/md";
 import {Link} from 'react-router-dom'
 import { FaUserNurse } from "react-icons/fa";
 const Doctor=()=>{
+    //fetch the datas
+    let [art , setArt]=useState('')
+    let [name , setName]=useState('')
+    let [sec , setSec]=useState()
+    let [uname , setUname]=useState()
+    const userDate=()=>{
+        fetch('https://dev.to/api/articles').then( data => data.json())
+        .then(dev =>{
+            
+            setArt(dev[0].user.name)
+            setName(dev[3].user.name)
+            setUname(dev[6].user.name)
+            setSec(dev[7].user.name)
+        } )
+    }
+    useEffect(()=>{
+        userDate()
+    })
     return (
         <>
             <header>
@@ -60,7 +78,7 @@ const Doctor=()=>{
                         <Col className="col-6">
                             <Card >
                                 <CardBody>
-                                    connect 
+                                    {art}
                                 </CardBody>
                             </Card>
                         </Col>
@@ -68,7 +86,7 @@ const Doctor=()=>{
                         <Col className="col-6">
                             <Card >
                                 <CardBody>
-                                    connect 
+                                    {name}
                                 </CardBody>
                             </Card>
                         </Col>
@@ -77,7 +95,7 @@ const Doctor=()=>{
                     <Col className="col-6">
                             <Card >
                                 <CardBody>
-                                    connect 
+                                   {sec}
                                 </CardBody>
                             </Card>
                         </Col>
@@ -85,7 +103,7 @@ const Doctor=()=>{
                         <Col className="col-6">
                             <Card >
                                 <CardBody>
-                                    connect 
+                                    {uname}
                                 </CardBody>
                             </Card>
                         </Col>
