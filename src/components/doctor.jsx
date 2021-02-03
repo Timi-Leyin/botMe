@@ -10,6 +10,10 @@ const Doctor=()=>{
     let [name , setName]=useState('')
     let [sec , setSec]=useState()
     let [uname , setUname]=useState()
+    let [met , setMet]=useState('');
+    let [twit, setTwit]=useState('')
+    let [twi , setTwi]=useState('')
+    let [tw, setTw]=useState('');
     const userDate=()=>{
         fetch('https://dev.to/api/articles').then( data => data.json())
         .then(dev =>{
@@ -18,6 +22,12 @@ const Doctor=()=>{
             setName(dev[3].user.name)
             setUname(dev[6].user.name)
             setSec(dev[7].user.name)
+            //twitter user name 
+            setMet(dev[0].user.twitter_username);
+            setTwit(dev[3].user.twitter_username)
+            setTwi(dev[6].user.twitter_username);
+            setTw(dev[7].user.twitter_username);
+            console.log(dev);
         } )
     }
     useEffect(()=>{
