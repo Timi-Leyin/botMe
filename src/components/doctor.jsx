@@ -1,7 +1,7 @@
 import React, {useState , useEffect } from 'react';
 import { Row , Col , Container , Card ,CardBody } from 'reactstrap'
 import {MdArrowBack} from "react-icons/md";
-import {Link , Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { FaUserNurse, FaGithub , FaTwitter} from "react-icons/fa";
 import {MdDeveloperMode} from 'react-icons/md'
 const Doctor=()=>{
@@ -14,6 +14,12 @@ const Doctor=()=>{
     let [twit, setTwit]=useState('')
     let [twi , setTwi]=useState('')
     let [tw, setTw]=useState('');
+
+         //now the github usernames
+         const [git , setGit ]=useState()
+         const [giti , setGiti]=useState()
+         const [gity , setGity]=useState()
+         const [gif , setGif]=useState()
     const userDate=()=>{
         fetch('https://dev.to/api/articles').then( data => data.json())
         .then(dev =>{
@@ -27,6 +33,13 @@ const Doctor=()=>{
             setTwit(dev[3].user.twitter_username)
             setTwi(dev[6].user.twitter_username);
             setTw(dev[7].user.twitter_username);
+
+            //call the github users back
+            setGif(dev[0].user.github_username)
+            setGiti(dev[3].user.github_username)
+            setGity(dev[6].user.github_username)
+            setGit(dev[7].user.github_username)
+            
             console.log(dev);
         } )
     }
@@ -34,7 +47,8 @@ const Doctor=()=>{
         userDate()
     })
 
-    const first= e =>window.open(e, '_blank');
+    const first= e =>window.open(`https://www.twitter.com/${e}` , '_blank');
+    const seconde= ev => window.open(`https://www.github.com/${ev}`, '_blank');
     return (
         <>
             <header>
@@ -95,8 +109,8 @@ const Doctor=()=>{
 
                                     <div id='list'>
                                         <br/><br/>
-                                        <h5 onClick={()=>first('https://www.github.com')}><FaGithub/></h5>
-                                        <h5><FaTwitter/></h5>
+                                        <h5  onClick={()=>seconde(gif)}><FaGithub/></h5>
+                                        <h5 onClick={()=>first(met)}><FaTwitter/></h5>
                                     </div>
                                 </CardBody>
                             </Card>
@@ -109,8 +123,8 @@ const Doctor=()=>{
 
                                     <div id='list'>
                                         <br/><br/>
-                                        <h5 onClick={()=>first('https://www.github.com')}><FaGithub/></h5>
-                                        <h5><FaTwitter/></h5>
+                                        <h5 onClick={()=>seconde(giti)}><FaGithub/></h5>
+                                        <h5 onClick={()=>first(met)}><FaTwitter/></h5>
                                     </div>
                                 </CardBody>
                             </Card>
@@ -124,8 +138,8 @@ const Doctor=()=>{
 
                                    <div id='list'>
                                         <br/><br/>
-                                        <h5 onClick={()=>first('https://www.github.com')}><FaGithub/></h5>
-                                        <h5><FaTwitter/></h5>
+                                        <h5 onClick={()=>seconde(git)}><FaGithub/></h5>
+                                        <h5 onClick={()=>first(twit)}><FaTwitter/></h5>
                                     </div>
                                 </CardBody>
                             </Card>
@@ -138,8 +152,8 @@ const Doctor=()=>{
 
                                     <div id='list'>
                                         <br/><br/>
-                                        <h5 onClick={()=>first('https://www.github.com')}><FaGithub/></h5>
-                                        <h5><FaTwitter/></h5>
+                                        <h5 onClick={()=>seconde(gity)}><FaGithub/></h5>
+                                        <h5 onClick={()=>first(tw)}><FaTwitter/></h5>
                                     </div>
                                 </CardBody>
                             </Card>
