@@ -2,7 +2,8 @@ import React, {useState , useEffect } from 'react';
 import { Row , Col , Container , Card ,CardBody } from 'reactstrap'
 import {MdArrowBack} from "react-icons/md";
 import {Link} from 'react-router-dom'
-import { FaUserNurse } from "react-icons/fa";
+import { FaUserNurse, FaGithub , FaTwitter} from "react-icons/fa";
+import {MdDeveloperMode} from 'react-icons/md'
 const Doctor=()=>{
     //fetch the datas
     let [art , setArt]=useState('')
@@ -79,6 +80,12 @@ const Doctor=()=>{
                             <Card >
                                 <CardBody>
                                     {art}
+
+                                    <div id='list'>
+                                        <br/><br/>
+                                        <FaGithub/>
+                                        <FaTwitter/>
+                                    </div>
                                 </CardBody>
                             </Card>
                         </Col>

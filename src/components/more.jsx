@@ -31,7 +31,7 @@ const More=()=> {
              <Breadcrumb>
                 <Breadcrumb>
                     <BreadcrumbItem>
-                         Meet new people and connect on twitter with them
+                        see trending developers articles
                     </BreadcrumbItem>
                 </Breadcrumb>
              </Breadcrumb>
