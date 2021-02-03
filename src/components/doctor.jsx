@@ -49,10 +49,10 @@ const Doctor=()=>{
 
                 <Container>
             <h5>
-                Take care of your health 
+                Stay safe and sound
             </h5>
             <small>
-                by Connecting with a doctor
+               
             </small>
 
             {/* introl */}
@@ -66,7 +66,7 @@ const Doctor=()=>{
                         CONNECT WITH OTHER DEVS 
                         </h6>
                         <small>
-                            connect with other developers from different platforms
+                            meet new developers and connect with them
                         </small>
                      </div>
                 </CardBody>
@@ -113,8 +113,12 @@ const Doctor=()=>{
 
             <Card className="mt-4" className="down">
                 <CardBody>
-                    <h6>your health</h6>
-                    <small>Your health is wealth </small>
+                    <h6>connect with other developers too one</h6>
+                   <span className="meet">
+                        
+
+
+                   </span>
                 </CardBody>
             </Card>
         </Container>

@@ -82,6 +82,7 @@ const Bot=()=>{
 
                     },2000)
 
+
                     //return the value of the input back to empty
                     inbox.value=''
                 } else {
@@ -127,7 +128,7 @@ const Bot=()=>{
 //back end
  const back=()=>{
      human('i need back end resources ');
-     const bak=['prossing your request pleasae wait for some time ','please wait , be patient'];
+     const bak=['processing your request pleasae wait for some time ','please wait , be patient'];
         const ra=bak[Math.floor(Math.random()*bak.length)]
         setTimeout(()=>  botReply(ra),1500)
         setTimeout(()=>{
@@ -142,8 +143,15 @@ const Bot=()=>{
            const ra=bak[Math.floor(Math.random()*bak.length)]
            setTimeout(()=>  botReply(ra),1500)
            setTimeout(()=>{
-               botReply('click on me')
+               botReply('wait i will redirect you now ')
+             
+
            },4200 )
+           setTimeout(()=>{
+            const urls=['https://freecodecamp.com','https://hahnode.com','https://educative.io','https://mdn.com'];
+            let vise=urls[Math.floor(Math.random()*urls.length)];
+            window.location=`${vise}`;
+           },5000)
        }
 
        //resoources on AI 
