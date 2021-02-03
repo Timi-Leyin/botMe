@@ -1,7 +1,7 @@
 import React, {useState , useEffect } from 'react';
 import { Row , Col , Container , Card ,CardBody } from 'reactstrap'
 import {MdArrowBack} from "react-icons/md";
-import {Link} from 'react-router-dom'
+import {Link , Redirect} from 'react-router-dom'
 import { FaUserNurse, FaGithub , FaTwitter} from "react-icons/fa";
 import {MdDeveloperMode} from 'react-icons/md'
 const Doctor=()=>{
@@ -23,6 +23,8 @@ const Doctor=()=>{
     useEffect(()=>{
         userDate()
     })
+
+    const first= e =>window.open(e, '_blank');
     return (
         <>
             <header>
@@ -83,8 +85,8 @@ const Doctor=()=>{
 
                                     <div id='list'>
                                         <br/><br/>
-                                        <FaGithub/>
-                                        <FaTwitter/>
+                                        <h5 onClick={()=>first('https://www.github.com')}><FaGithub/></h5>
+                                        <h5><FaTwitter/></h5>
                                     </div>
                                 </CardBody>
                             </Card>
@@ -94,6 +96,12 @@ const Doctor=()=>{
                             <Card >
                                 <CardBody>
                                     {name}
+
+                                    <div id='list'>
+                                        <br/><br/>
+                                        <h5 onClick={()=>first('https://www.github.com')}><FaGithub/></h5>
+                                        <h5><FaTwitter/></h5>
+                                    </div>
                                 </CardBody>
                             </Card>
                         </Col>
@@ -103,6 +111,12 @@ const Doctor=()=>{
                             <Card >
                                 <CardBody>
                                    {sec}
+
+                                   <div id='list'>
+                                        <br/><br/>
+                                        <h5 onClick={()=>first('https://www.github.com')}><FaGithub/></h5>
+                                        <h5><FaTwitter/></h5>
+                                    </div>
                                 </CardBody>
                             </Card>
                         </Col>
@@ -111,6 +125,12 @@ const Doctor=()=>{
                             <Card >
                                 <CardBody>
                                     {uname}
+
+                                    <div id='list'>
+                                        <br/><br/>
+                                        <h5 onClick={()=>first('https://www.github.com')}><FaGithub/></h5>
+                                        <h5><FaTwitter/></h5>
+                                    </div>
                                 </CardBody>
                             </Card>
                         </Col>
