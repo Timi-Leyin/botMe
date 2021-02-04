@@ -1,6 +1,5 @@
 
 import './App.css';
-import {Button} from 'reactstrap'
 import './components/bootstrap.css'
 import Index from './components/main'
 import Case from './components/case'
@@ -28,6 +27,7 @@ function App() {
           <Route component={Err}/>
         </Switch>
       </Router>
+      {/* balen means Bot and Learn  */}
     </div>
   );
 }

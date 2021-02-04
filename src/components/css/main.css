@@ -1,3 +1,59 @@
+.auth_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  color: grey;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(./bg/bg21.png);
+}
+
+.auth_contents button {
+  color: rgba(100, 100, 100, 0.781);
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
+
+.not_found {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.not_found img {
+  width: 20%;
+  height: 50%;
+}
+
+.not_found h5 {
+  color: teal;
+  font-weight: bold;
+}
+
+.not_found h1 {
+  cursor: pointer;
+  text-align: center;
+  font-size: 50px;
+  color: #ff4f5e;
+}
+
 .side_left {
   background-color: #abcff7;
   height: 100vh;
@@ -111,6 +167,21 @@
   width: 50%;
 }
 
+.devTo .card {
+  padding: 1.5em 0.5em;
+  position: relative;
+}
+
+.devTo .card span ul {
+  list-style-type: none;
+  display: inline;
+}
+
+.devTo .card span ul li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
 .middles {
   height: 100vh;
 }
@@ -161,6 +232,11 @@
   padding: 3em 1em;
   -webkit-box-shadow: 2px 3px 9px rgba(165, 165, 165, 0.267);
           box-shadow: 2px 3px 9px rgba(165, 165, 165, 0.267);
+}
+
+.catch {
+  font-size: 12px;
+  color: #bd2e2e;
 }
 
 .card-1 {
@@ -232,6 +308,15 @@
   float: right;
   padding-right: 1em;
   cursor: pointer;
+}
+
+.sidebar a {
+  color: #d1cdcd;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: yellow;
 }
 
 footer {
@@ -340,14 +425,25 @@ footer h5 {
 }
 
 .upload-btn {
-  color: red;
-  right: 2em;
+  background-color: #474799;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: 1em;
+  color: white;
 }
 
-label {
+.upload-btn label {
+  padding-top: 0.2em;
+  font-size: 30px;
   font-weight: bold;
-  float: right;
-  right: 4em;
+  cursor: pointer;
+}
+
+.foot {
+  position: absolute;
+  bottom: 1em;
 }
 
 .click {
@@ -397,6 +493,41 @@ label {
     background-image: url(./bg/bg1.png);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .not_found {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .not_found img {
+    width: 70%;
+    height: 50%;
+  }
+  .not_found h5 {
+    color: teal;
+    font-weight: bold;
+  }
+  .not_found h1 {
+    cursor: pointer;
+    text-align: center;
+    font-size: 50px;
+    color: #ff4f5e;
+  }
+  .auth_contents {
+    background-image: url(./bg/bg1.png);
+    background-repeat: repeat;
+    background-size: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */

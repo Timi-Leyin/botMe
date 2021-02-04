@@ -9,8 +9,47 @@ $bg: rgba(128, 128, 128, 0.507);
 $bh: rgba(27, 27, 27, 0.89);
 $pup:#7c7cbb;
 $pi:#474799;
+.auth_contents {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    color: grey;
+    justify-content: center;
+    background-image: url(./bg/bg21.png);
+   
 
 
+    button {
+      color: rgba(100, 100, 100, 0.781);
+      font-weight: bold;
+      outline: none;
+      border: none;
+
+    }
+}
+//404 page 
+.not_found {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+   img {
+     width: 20%;
+     height: 50%;
+   }
+   h5 {
+    color: teal;
+    font-weight: bold;
+     
+   }
+   h1 {
+     cursor: pointer;
+     text-align: center;
+     font-size: 50px;
+     color: #ff4f5e;
+   }
+}
 .side_left {
   background-color: #abcff7;
   height: 100vh;
@@ -94,6 +133,27 @@ $bread:#e9ecef;
     }
   }
 }
+
+//for all the articles 
+.devTo {
+  .card {
+    padding: 1.5em 0.5em;
+    position: relative;
+
+    span {
+
+      ul{
+        list-style-type: none;
+        display: inline;
+
+        li {
+          display: inline-block;
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+}
 .middles {
   height: 100vh;
   // border: 1px solid grey;
@@ -141,6 +201,10 @@ $bread:#e9ecef;
 .features {
   padding: 3em 1em;
   box-shadow: 2px 3px 9px rgba(165, 165, 165, 0.267);
+}
+.catch {
+  font-size: 12px;
+  color: rgb(189, 46, 46);
 }
 
 .card-1 {
@@ -209,6 +273,13 @@ $bread:#e9ecef;
     float: right;
     padding-right: 1em;
     cursor: pointer;
+  }
+  a{
+    color: rgb(209, 205, 205);
+    text-decoration: none;
+  }
+  a:hover {
+    color: yellow;
   }
 }
 //now this is the footer aspect
@@ -310,15 +381,29 @@ footer {
 
 //footer btn
 .upload-btn {
-  color: red;
-  right: 2em;
+  background-color: $pi;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: 1em;
+  color: white;
+ 
+  label {
+    padding-top: 0.2em;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+}
+//footer for the uopload btn 
+.foot {
+  position: absolute;
+  bottom: 1em;
+  
 }
 
-label {
-  font-weight: bold;
-  float: right;
-  right: 4em;
-}
 
 .click {
   color: white;
@@ -372,5 +457,32 @@ label {
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
+
+  .not_found {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+     img {
+       width: 70%;
+       height: 50%;
+     }
+     h5 {
+      color: teal;
+      font-weight: bold;
+       
+     }
+     h1 {
+       cursor: pointer;
+       text-align: center;
+       font-size: 50px;
+       color: #ff4f5e;
+     }
+  }
+  .auth_contents {
+    background-image: url(./bg/bg1.png);
+    background-repeat: repeat;
+    background-size: auto;
+  }
 }

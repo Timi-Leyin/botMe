@@ -12,9 +12,9 @@ const Index=()=>{
                     <div className="hold">
                         <div className="text-center middle">
                             <span>
-                                <text-muetd>
-                                    Know more about your health and connect with a doctor with Thomus
-                                </text-muetd>
+                                <div className="text-muted">
+                                   Meet , Learn , Get learning Resources with BALEN 
+                                </div>
                                 <br/>
                                 <Link to="auth">
                                     <h1>

@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import { Container , Form , Row , Col , Button , Badge , Input} from 'reactstrap';
+import React, {useState} from 'react';
+import { Container , Form , Row , Col , Button  , Input} from 'reactstrap';
 import './css/main.css';
-import { BiMenuAltLeft } from "react-icons/bi";
+
 import {MdArrowBack} from "react-icons/md";
 import {RiSendPlane2Fill} from "react-icons/ri";
 import {Link } from 'react-router-dom';
@@ -171,7 +171,7 @@ const Bot=()=>{
             <Row>
                 <Col className="col-12 col-md-6 col-xl-6 social_cover">
                     <div className="social_image">
-                        <img src={social} alt="social image icon" className='vec'/>
+                        <img src={social} alt="social  icon" className='vec'/>
                         <span>
                             <h5>CHAT WITH BOT</h5>
                         </span>
@@ -195,7 +195,7 @@ const Bot=()=>{
                                 </span>
                                 <h6>{ask}</h6>
                                 <span>
-                                      <h4><MdSettings/></h4>
+                                      <h4 style={{cursor:'pointer'}}><MdSettings/></h4>
                                
                                 </span>
                             </div>
@@ -203,7 +203,7 @@ const Bot=()=>{
                     <Container>
                         <div className="ova">
                         <div className="botMsg">
-                            <small>Hello i am Truthy your new friend , so what do you want me to do for you today?</small>
+                            <small>Hello i am BALEN your new friend , so what do you want me to do for you today?</small>
                         </div>
                             <div className='go'>
                             <div>

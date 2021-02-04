@@ -1,10 +1,11 @@
 import React, {useState , useEffect } from 'react';
 import { Row , Col , Container , Card ,CardBody } from 'reactstrap'
-import {MdArrowBack} from "react-icons/md";
+import {MdArrowBack, MdDeveloperBoard, MdMoreVert} from "react-icons/md";
 import {Link} from 'react-router-dom'
-import { FaUserNurse, FaGithub , FaTwitter} from "react-icons/fa";
+import { FaGithub , FaTwitter} from "react-icons/fa";
 import {MdDeveloperMode} from 'react-icons/md'
 import world from '../vectors/world.png';
+import { RiMenFill } from 'react-icons/ri';
 const Doctor=()=>{
     //fetch the datas
     let [art , setArt]=useState('')
@@ -42,7 +43,12 @@ const Doctor=()=>{
             setGit(dev[7].user.github_username)
             
             console.log(dev);
-        } )
+        } ).catch(offline => {
+            setArt('bad network')
+            setName('bad network ')
+            setUname('bad network')
+            setSec('bad network')
+        })
     }
     useEffect(()=>{
         userDate()
@@ -59,8 +65,9 @@ const Doctor=()=>{
                            <MdArrowBack/>
                         </Link>
 
-                    </span><span>
-                        icons2
+                    </span>
+                    <span>
+                       <h4><MdMoreVert/></h4>
 
                     </span>
                 </div>
@@ -89,7 +96,8 @@ const Doctor=()=>{
             <Card className="mt-3" id="doctor">
                 <CardBody>
                     <span>
-                       <FaUserNurse/>
+                       <MdDeveloperMode/>
+                
                     </span>
                      <div>
                         <h6>
@@ -108,7 +116,7 @@ const Doctor=()=>{
                         <Col className="col-6">
                             <Card >
                                 <CardBody>
-                                    {art}
+                                   <p className='text-muted'> {art}</p>
 
                                     <div id='list'>
                                         <br/><br/>
@@ -122,7 +130,7 @@ const Doctor=()=>{
                         <Col className="col-6">
                             <Card >
                                 <CardBody>
-                                    {name}
+                                    <p className="text-muted"> {art} </p>
 
                                     <div id='list'>
                                         <br/><br/>
@@ -137,7 +145,7 @@ const Doctor=()=>{
                     <Col className="col-6">
                             <Card >
                                 <CardBody>
-                                   {sec}
+                                  <p className="text-muted"> {sec} </p>
 
                                    <div id='list'>
                                         <br/><br/>
@@ -151,7 +159,7 @@ const Doctor=()=>{
                         <Col className="col-6">
                             <Card >
                                 <CardBody>
-                                    {uname}
+                                    <p className="text-muted">{uname}</p>
 
                                     <div id='list'>
                                         <br/><br/>

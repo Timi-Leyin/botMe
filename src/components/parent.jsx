@@ -1,12 +1,11 @@
 import React, {useState} from 'react'
 import './css/main.css';
-import { Container , Row , Col , Button  , Badge , Card ,CardText, CardFooter , CardTitle , CardBody , Breadcrumb , BreadcrumbItem} from 'reactstrap'
+import { Container , Row , Col   , Badge , Card ,CardText , CardTitle , CardBody , Breadcrumb , BreadcrumbItem} from 'reactstrap'
 import { Link } from 'react-router-dom';
 import { HiChatAlt2 } from "react-icons/hi";
 import { MdLocalHospital } from "react-icons/md";
 import { BiMenuAltLeft } from "react-icons/bi";
-import { FaUserNurse } from "react-icons/fa";
-import {MdChatBubble} from "react-icons/md";
+
 import {RiArticleFill} from 'react-icons/ri'
 
 const Main_page=()=>{
@@ -25,7 +24,7 @@ const Main_page=()=>{
           <Row>
              <Col className="col-12 col-md-4 col-lg-4 first">
                 <Container>
-                    <h4 className="text-center">FEATURES</h4>
+                    <h5 className="text-center text-muted">FEATURES</h5>
                   <Row>
                      <Col className="col-12 ">
                        <Breadcrumb >
@@ -64,14 +63,6 @@ const Main_page=()=>{
                        </Breadcrumb>
                      </Col>
 
-                     {/* <Col className="col-12 mt-3 ">
-                      <Breadcrumb >
-                        <BreadcrumbItem className="bread">
-                            <h6 className="text-muted">SEE TRENDING ARTICLES </h6>
-                            <small className="text-muted">see list of trending articles by other developers </small>
-                        </BreadcrumbItem>
-                      </Breadcrumb>
-                    </Col> */}
 
 
                   </Row>
@@ -90,7 +81,7 @@ const Main_page=()=>{
                       <Link to="more">
                        <li> Meet</li>
                       </Link>
-                       <li> Connect </li>
+                    
                         <Link to="bot">
                           <li> Chat </li>
                         </Link>
@@ -114,6 +105,11 @@ const Main_page=()=>{
                                 <CardTitle>
                                   <span className="emo">
                                    <HiChatAlt2/>
+                                   <sup>
+                                     <small><Badge color="light">
+                                       1
+                                     </Badge></small>
+                                   </sup>
                                   </span>
                                   <br/>
                                   <small className="text-muted">Chat with bot</small>
@@ -133,6 +129,7 @@ const Main_page=()=>{
                               <CardTitle>
                                   <span className="emo"> 
                                     <MdLocalHospital/>
+                                    
                                   </span> <br/>
                                   <small className="text-muted">Connect with other devs  </small>
                               </CardTitle>

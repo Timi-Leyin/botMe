@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {MdArrowBack} from "react-icons/md";
 import {Link} from 'react-router-dom'
-import { Container , Button , Card , Badge ,CardBody,BreadcrumbItem,Breadcrumb} from 'reactstrap'
+import { Container  , Card , Badge ,CardBody,BreadcrumbItem,Breadcrumb} from 'reactstrap'
 import firebase from './firebase'
 const Share=()=>{
     let [upload , setUpload]=useState('')
@@ -69,20 +69,21 @@ const Share=()=>{
                 <hr/>
 
             </div>
-          <footer>
+          <footer className="foot">
+          <div className="errors">
+                  <small className="err"> {msg}</small>
+                  <small className="loadMsg">{upload}</small>
+                </div>
           <div className="upload-btn" >
                 <form action="" onSubmit={e=>e.preventDefault()}>
-                   <label htmlFor="pdf">upload</label>
+                   <label htmlFor="pdf">+</label>
                     <input type="file" name="load" id="pdf" style={{display:'none'}} onChange={uploadTo}/>
 
 
                 </form>
                 <br/>
-                <div className="errors">
-                  <small className="err"> {msg}</small>
-                  <small className="loadMsg">{upload}</small>
-                </div>
-            </div>
+               
+             </div>
           </footer>
             </Container>
 
