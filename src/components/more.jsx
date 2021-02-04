@@ -2,13 +2,16 @@ import React, { useState, useEffect } from 'react';
 import {MdArrowBack} from "react-icons/md";
 import {Link} from 'react-router-dom'
 import { Container , Button , Card , Badge ,CardBody,BreadcrumbItem,Breadcrumb, Form, Row , Col} from 'reactstrap'
+import radio from '../vectors/radio.svg';
 const More=()=> {
     return (
         <>
 
             <Row>
-                <Col className="col-md-6 col-12 col-lg-6">
-                
+                <Col className="col-md-6 col-12 col-lg-6 side_left">
+                    <div className="side_image">
+                        <center>   <img src={radio} alt="side image"/> </center>
+                    </div>
                 </Col>
                 <Col className="col-md-6 col-12 col-lg-6"> 
                     <div>

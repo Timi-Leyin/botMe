@@ -6,7 +6,7 @@ import Auth from './auth'
 import './css/main.css';
 const Index=()=>{
     return (
-        <>
+        <div className="bg">
             <div className="content">
                 <Container>
                     <div className="hold">
@@ -28,7 +28,7 @@ const Index=()=>{
                     </div>
                 </Container>
             </div>
-        </>
+        </div>
 
     )
 }

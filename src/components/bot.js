@@ -6,7 +6,7 @@ import {MdArrowBack} from "react-icons/md";
 import {RiSendPlane2Fill} from "react-icons/ri";
 import {Link } from 'react-router-dom';
 import {MdSettings} from 'react-icons/md'
-
+import social from '../vectors/social.svg'
 
 const Bot=()=>{
     //function for the bot 
@@ -167,9 +167,15 @@ const Bot=()=>{
        }
     return (
 
-        <>
+        <div className="rw">
             <Row>
-                <Col className="col-12 col-md-6 col-xl-6">
+                <Col className="col-12 col-md-6 col-xl-6 social_cover">
+                    <div className="social_image">
+                        <img src={social} alt="social image icon" className='vec'/>
+                        <span>
+                            <h5>CHAT WITH BOT</h5>
+                        </span>
+                    </div>
 
                 </Col>
                 <Col className="col-12 col-md-6 col-xl-6">
@@ -190,6 +196,7 @@ const Bot=()=>{
                                 <h6>{ask}</h6>
                                 <span>
                                       <h4><MdSettings/></h4>
+                               
                                 </span>
                             </div>
                     </header>
@@ -244,7 +251,7 @@ const Bot=()=>{
 
                 </Col>
             </Row>
-        </>
+        </div>
     )
 
 }

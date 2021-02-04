@@ -7,10 +7,72 @@ $col4: #3d42ad;
 $twit: rgb(107, 125, 140);
 $bg: rgba(128, 128, 128, 0.507);
 $bh: rgba(27, 27, 27, 0.89);
+$pup:#7c7cbb;
+$pi:#474799;
+
+
+.side_left {
+  background-color: #abcff7;
+  height: 100vh;
+}
+.side_image {
+  position: relative;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  img {
+    //position: absolute;
+    margin-top: 8em;
+    left: 8em;
+  }
+}
+
 $bread:#e9ecef;
+.social_cover {
+  background-color: #454585;
+  height: 100vh;
+}
+
+.social_image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+  .vec {
+    margin-top: 20em;
+  }
+
+}
+.rw {
+  height: 100vh;
+}
 .details {
   display: flex;
 }
+.world {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  img {
+    position: absolute;
+    top: 60%;
+
+  }
+
+}
+#list {
+  display: flex;
+  margin-top: 4em;
+    h5 {
+      margin-left: 1em;
+      font-size: 20px;
+    }
+    h5:hover{
+      color:$pup;
+    }
+}
+
 .bread {
   padding: 2em 0;
 }
@@ -105,9 +167,6 @@ $bread:#e9ecef;
   }
 }
 
-.parent {
-  background-color: #fff;
-}
 
 .card {
   // box-shadow: 2px 3px 9px rgba(92, 92, 92, 0);
@@ -198,7 +257,10 @@ footer {
   font-size: 14px;
   margin-top: 2em;
 }
-
+.parent {
+  background-image: url(./bg/bg21.png);
+  background-color: rgba(233, 231, 231, 0.459);
+}
 .svg {
   cursor: pointer;
 }
@@ -211,7 +273,7 @@ footer {
 }
 //doctor block
 #doctor {
-  background-color: $col4;
+  background-color: $pi;
   backdrop-filter: blur(50px);
   margin-bottom: 20px;
   color: white;
@@ -263,6 +325,10 @@ label {
   display: none;
 }
 
+.bg {
+  background-image: url(./bg/bg2.png);
+}
+
 /* on small phones hide the other columns */
 @media screen and (min-width: 200px) and (max-width: 600px) {
   .first,
@@ -290,4 +356,21 @@ label {
       color: $special;
     }
   }
+  .social_cover{
+    display: none;
+  }
+  .side_left {
+    display: none;
+  }
+
+  // .bg {
+  //   background-image: url(./bg/bg2.png);
+  // }
+  .parent {
+    background-color: #fff;
+    background-image: url(./bg/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
 }

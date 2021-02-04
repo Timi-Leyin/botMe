@@ -4,6 +4,7 @@ import {MdArrowBack} from "react-icons/md";
 import {Link} from 'react-router-dom'
 import { FaUserNurse, FaGithub , FaTwitter} from "react-icons/fa";
 import {MdDeveloperMode} from 'react-icons/md'
+import world from '../vectors/world.png';
 const Doctor=()=>{
     //fetch the datas
     let [art , setArt]=useState('')
@@ -69,7 +70,9 @@ const Doctor=()=>{
         
             <Row>
                 <Col className='col-12 col-md-6 col-lg-6'>
-
+                    <div className="world">
+                         <img src={world} alt="side iamge"/>
+                    </div>
                 </Col>
 
                 <Col className='col-12 col-md-6 col-lg-6'>
