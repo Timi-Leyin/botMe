@@ -1,3 +1,9 @@
+.line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .auth_contents {
   display: -webkit-box;
   display: -ms-flexbox;

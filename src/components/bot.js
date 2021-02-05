@@ -238,10 +238,12 @@ const Bot=()=>{
                                   </span>
                                     </div>
 
-                                  <div style={{display:machine}} className="text-center" >
-                                      <Button className="mr-2" onClick={back}>Back end </Button>
+                                  <div style={{display:machine}} className="text-center " >
+                                    <div className="line">
+                                        <Button className="mr-2" onClick={back}>Back end </Button>
                                       <Button className="mr-2" onClick={front}>Front End </Button>
                                       <Button className="mr-2" onClick={ai}>MLH</Button>
+                                    </div>
                                   </div>
                               </div>
                                   
