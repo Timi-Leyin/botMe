@@ -3,8 +3,9 @@ import {MdArrowBack} from "react-icons/md";
 import {Link} from 'react-router-dom'
 import { Container, Card , Badge ,CardBody,BreadcrumbItem,Breadcrumb, CardDeck, Row , Col} from 'reactstrap'
 import radio from '../vectors/radio.svg';
-import {  FaGithub , FaSpinner ,FaClock} from "react-icons/fa";
+import {  FaGithub , FaSpinner } from "react-icons/fa";
 import { BiComment} from 'react-icons/bi';
+import { HiClock } from 'react-icons/hi';
 
 const More=()=> {
     let [article, setArticle]=useState()
@@ -13,6 +14,11 @@ const More=()=> {
     let [forth_article , setForth_article]=useState()
     let [last_article , setLast_article]=useState()
     let [failed , setFailed]=useState();
+    let [clock , setClock]=useState()
+    let [seclock, setSeclock]=useState()
+    let [tclock , setTclock]=useState()
+    let [fclock , setFclock]=useState()
+    let [lclock ,setLclock]=useState()
     //hooks for the comments
     let [firstcom , setFirstcom ]=useState();
     let [sec_reply , setSec_reply ]=useState();
@@ -27,22 +33,30 @@ const More=()=> {
           //  setFirstcom(dev[0])
            setArticle(dev[0].title)
            setFirstcom(dev[0].comments_count)
+           setClock(dev[0].published_at)
 
            //now the second article 
            setView(dev[3].title)
            setSec_reply(dev[3].comments_count)
+           setSeclock(dev[3].published_at)
 
            //third article 
            setThird_article(dev[5].title)
            setThird_reply(dev[5].comments_count)
+           setTclock(dev[5].published_at)
 
            //forth article 
            setForth_article(dev[6].title)
            setForth_reply(dev[6].comments_count)
+           setFclock(dev[6].published_at)
 
            //lasat article 
            setLast_article(dev[24].title)
            setLast(dev[24].comments_count)
+           setLclock(dev[24].published_at)
+
+           //time 
+
             
             console.log(dev);
         } ).catch(er => {
@@ -94,12 +108,14 @@ const More=()=> {
                 <Card>
                   <small className="text-muted">{loading ===''?<FaSpinner/>:''}</small>
                  <CardBody>
-                        <CardDeck>
+                     
                             <p className="catch">{failed}</p>
                             <p>{article}</p>
-
-                            <FaClock/>
-                        </CardDeck>
+                            
+                            <p><HiClock/>
+                              <small className="text-muted">{clock}</small>
+                            </p>
+                   
 
                         
                  </CardBody>
@@ -124,6 +140,10 @@ const More=()=> {
                  <CardBody>
                  <p className="catch">{failed}</p>
                  <p>{view}</p>
+
+                 <p><HiClock/>
+                              <small className="text-muted">{seclock}</small>
+                            </p>
                     
                  </CardBody>
                  {/* info side */}
@@ -147,6 +167,10 @@ const More=()=> {
                  <CardBody>
                     <p className="catch">{failed}</p>
                     <p>{last_article}</p>
+
+                    <p><HiClock/>
+                              <small className="text-muted">{tclock}</small>
+                            </p>
                  </CardBody>
              </Card>
              {/* forth part */}
@@ -181,6 +205,10 @@ const More=()=> {
                      <CardDeck>
                        <p className="catch">{failed}</p>
                        {forth_article} 
+
+                       <p><HiClock/>
+                              <small className="text-muted">{lclock}</small>
+                            </p>
                      </CardDeck>
                  </CardBody>
                    
