@@ -11,6 +11,7 @@ import Doctor from './components/doctor'
 import Share from './components/share'
 import More from './components/more'
 import {BrowserRouter as Router , Route , Switch} from 'react-router-dom';
+/* "start": "react-scripts start",*/
 function App() {
   return (
     <div className="App">
