@@ -11,20 +11,38 @@ const More=()=> {
     let [view , setView]=useState()
     let [third_article , setThird_article]=useState()
     let [forth_article , setForth_article]=useState()
+    let [last_article , setLast_article]=useState()
     let [failed , setFailed]=useState();
     //hooks for the comments
-    let [firstcom , setFirstcom ]=useState(12);
-    let [sec_reply , setSec_reply ]=useState(2);
-    let [third_reply , setThird_reply ]=useState(90);
-    let [forth_reply , setForth_reply ]=useState(22);
+    let [firstcom , setFirstcom ]=useState();
+    let [sec_reply , setSec_reply ]=useState();
+    let [third_reply , setThird_reply ]=useState();
+    let [forth_reply , setForth_reply ]=useState();
     let [last , setLast]=useState(89)
     //to set the loading 
     let [loading , setLoading]=useState('')
     const userDate=()=>{
         fetch('https://dev.to/api/articles').then( data => data.json())
         .then(dev =>{
-            
-            
+          //  setFirstcom(dev[0])
+           setArticle(dev[0].title)
+           setFirstcom(dev[0].comments_count)
+
+           //now the second article 
+           setView(dev[3].title)
+           setSec_reply(dev[3].comments_count)
+
+           //third article 
+           setThird_article(dev[5].title)
+           setThird_reply(dev[5].comments_count)
+
+           //forth article 
+           setForth_article(dev[6].title)
+           setForth_reply(dev[6].comments_count)
+
+           //lasat article 
+           setLast_article(dev[24].title)
+           setLast(dev[24].comments_count)
             
             console.log(dev);
         } ).catch(er => {
@@ -78,6 +96,9 @@ const More=()=> {
                  <CardBody>
                         <CardDeck>
                             <p className="catch">{failed}</p>
+                            <p>{article}</p>
+
+                            <FaClock/>
                         </CardDeck>
 
                         
@@ -87,7 +108,7 @@ const More=()=> {
                      <ul>
                          <li><FaGithub/></li>
                          <li><BiComment/><Badge color="warning">
-                            {last}
+                           {firstcom}
                          </Badge> </li>
                          <li><Badge color="dark">
                              #webdev
@@ -102,6 +123,7 @@ const More=()=> {
                  <small className="text-muted">{loading ===''?<FaSpinner/>:''}</small>
                  <CardBody>
                  <p className="catch">{failed}</p>
+                 <p>{view}</p>
                     
                  </CardBody>
                  {/* info side */}
@@ -109,7 +131,7 @@ const More=()=> {
                      <ul>
                          <li><FaGithub/></li>
                          <li><BiComment/><Badge color="warning">
-                            {firstcom}
+                            {sec_reply}
                         </Badge> </li>
                          <li><Badge color="dark">
                              #webdev
@@ -124,27 +146,32 @@ const More=()=> {
              <small className="text-muted">{loading ===''?<FaSpinner/>:''}</small>
                  <CardBody>
                     <p className="catch">{failed}</p>
+                    <p>{last_article}</p>
                  </CardBody>
              </Card>
              {/* forth part */}
              <Card className="mt-3">
-             <small className="text-muted">{loading ===''?<FaSpinner/>:''}</small>
+               <small className="text-muted">{loading ===''?<FaSpinner/>:''}</small>
                  <CardBody>
-                     
+                     <CardDeck>
+                       <p className="catch">{failed}</p>
+                       {third_article} 
+                     </CardDeck>
                  </CardBody>
+                   
                     {/* info side */}
                     <span>
                      <ul>
                          <li><FaGithub/></li>
                          <li><BiComment/><Badge color="warning">
-                            {sec_reply}
+                            {third_reply}
                         </Badge> </li>
                          <li><Badge color="dark">
                              #webdev
                          </Badge></li>
                      </ul>
                  </span>
-      
+                      
              </Card>
 
              {/* firth card  */}
@@ -153,6 +180,7 @@ const More=()=> {
                  <CardBody>
                      <CardDeck>
                        <p className="catch">{failed}</p>
+                       {forth_article} 
                      </CardDeck>
                  </CardBody>
                    
