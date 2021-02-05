@@ -9,6 +9,7 @@ import {MdSettings} from 'react-icons/md'
 import social from '../vectors/social.svg'
 
 const Bot=()=>{
+
     //function for the bot 
     let [ask , setAsk]=useState('')
     let [hide ,setHide ]=useState('none')
@@ -132,8 +133,13 @@ const Bot=()=>{
         const ra=bak[Math.floor(Math.random()*bak.length)]
         setTimeout(()=>  botReply(ra),1500)
         setTimeout(()=>{
-            botReply('click on me')
+            botReply('i will redirect you in a moment ')
         },4200 )
+        setTimeout(()=>{
+            const urls=['https://webdevscom.github.io/resources','https://www.codecademy.com/learn/learn-node-js','https://educative.io','https://mdn.com'];
+            let vise=urls[Math.floor(Math.random()*urls.length)];
+            window.location=`${vise}`;
+           },5000)
     }
 
     //front end developement
@@ -148,7 +154,7 @@ const Bot=()=>{
 
            },4200 )
            setTimeout(()=>{
-            const urls=['https://freecodecamp.com','https://hahnode.com','https://educative.io','https://mdn.com'];
+            const urls=['https://webdevscom.github.io/resources','https://freecodecamp.com','https://hahnode.com','https://educative.io','https://developer.mozilla.org/en-US/','https://frontendmasters.com/'];
             let vise=urls[Math.floor(Math.random()*urls.length)];
             window.location=`${vise}`;
            },5000)
@@ -163,7 +169,12 @@ const Bot=()=>{
            setTimeout(()=>{
                botReply(`resource URL is loading `) 
            },4200 )
-           setTimeout(()=>window.location='https://google.com' ,6500)
+           setTimeout(()=>{
+            const urls=['https://cloud.google.com/training/machinelearning-ai','https://webdevscom.github.io/resources','https://webdevscom.github.io/resources/103','https://towardsdatascience.com/beginners-learning-path-for-machine-learning-5a7fb90f751a?gi=14206448e123','https://www.bitdegree.org/learning-path/machine-learning'];
+            let vise=urls[Math.floor(Math.random()*urls.length)];
+            window.location=`${vise}`;
+           },5000)
+           
        }
     return (
 
@@ -172,9 +183,7 @@ const Bot=()=>{
                 <Col className="col-12 col-md-6 col-xl-6 social_cover">
                     <div className="social_image">
                         <img src={social} alt="social  icon" className='vec'/>
-                        <span>
-                            <h5>CHAT WITH BOT</h5>
-                        </span>
+                      
                     </div>
 
                 </Col>
@@ -222,7 +231,7 @@ const Bot=()=>{
                                 <div className="ml" >
                                     <div style={{display:details}}>
                                     <span className="details" >
-                                          <Button className="mr-2" color="info" >  Minify code  </Button>
+                                          <Button className="mr-2" color="info" onClick={()=>window.open('https://javascript-minifier.com/', '_blank')} >  Minify code  </Button>
                                           <Button className="mr-2" color="info" onClick={resource}> Code resource </Button>
                                           <Button id="chat" onClick={clean} style={{display:chaty}} color="info">Chat with me </Button>
                                       
