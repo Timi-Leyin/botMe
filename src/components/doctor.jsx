@@ -1,11 +1,11 @@
 import React, {useState , useEffect } from 'react';
 import { Row , Col , Container , Card ,CardBody } from 'reactstrap'
-import {MdArrowBack, MdDeveloperBoard, MdMoreVert} from "react-icons/md";
+import {MdArrowBack, MdMoreVert} from "react-icons/md";
 import {Link} from 'react-router-dom'
 import { FaGithub , FaTwitter} from "react-icons/fa";
 import {MdDeveloperMode} from 'react-icons/md'
 import world from '../vectors/world.png';
-import { RiMenFill } from 'react-icons/ri';
+
 const Doctor=()=>{
     //fetch the datas
     let [art , setArt]=useState('')

@@ -24,7 +24,7 @@ const More=()=> {
     let [sec_reply , setSec_reply ]=useState();
     let [third_reply , setThird_reply ]=useState();
     let [forth_reply , setForth_reply ]=useState();
-    let [last , setLast]=useState(89)
+    let [last , setLast]=useState()
     //to set the loading 
     let [loading , setLoading]=useState('')
     const userDate=()=>{
