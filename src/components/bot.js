@@ -22,7 +22,7 @@ const Bot=()=>{
        }
     
        window.addEventListener('load',()=>run())
-    const { dat , reply ,inbox ,btn,app,res, clear }={
+    const {  reply ,inbox ,btn,app,res }={
         dat:document.querySelector('.userMsg'),
         reply:document.querySelector('.reply'),
         inbox:document.querySelector('.inbox'),
