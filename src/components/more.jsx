@@ -3,7 +3,7 @@ import {MdArrowBack} from "react-icons/md";
 import {Link} from 'react-router-dom'
 import { Container, Card , Badge ,CardBody,BreadcrumbItem,Breadcrumb, CardDeck, Row , Col} from 'reactstrap'
 import radio from '../vectors/radio.svg';
-import {  FaGithub , FaSpinner} from "react-icons/fa";
+import {  FaGithub , FaSpinner ,FaClock} from "react-icons/fa";
 import { BiComment} from 'react-icons/bi';
 
 const More=()=> {
