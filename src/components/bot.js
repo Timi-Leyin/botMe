@@ -248,8 +248,9 @@ const Bot=()=>{
                                     </div>
                                   </div>
                               </div>
+                              <br></br>
                                   
-                              <Form onSubmit={e=>e.preventDefault()} style={{display:hide}} className="foot">
+                              <Form onSubmit={e=>e.preventDefault()} style={{display:hide}} className="foot mt-5">
                                   <Input className="inbox"/>          
                                  <h5> <RiSendPlane2Fill onClick={user} id="btn"/></h5>
                                   {/* <button id="btn" onClick={user} >click</button>                */}
