@@ -230,7 +230,7 @@ const Bot=()=>{
                             <footer>
                                 
                                 <div className="inside">
-                                <div className="ml" >
+                                <div className="ml " >
                                     <div style={{display:details}}>
                                     <span className="details" >
                                           <Button className="mr-2" color="info" onClick={()=>window.open('https://javascript-minifier.com/', '_blank')} >  Minify code  </Button>
