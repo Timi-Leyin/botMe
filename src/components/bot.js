@@ -62,7 +62,7 @@ const Bot=()=>{
             let val=inbox.value;
                 if(val.length!==0) {
                     human(inbox.value)   
-                    let mail=/[a-zA-Z0-9]\@gmail\.com/
+                    let mail=/[a-zA-Z0-9]gmail\.com/
                     //set the input box back to empty
                 
            
