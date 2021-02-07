@@ -64,7 +64,7 @@ const Bot=()=>{
                     human(inbox.value)   
                     let mail=/[a-zA-Z0-9]\@gmail\.com/
                     //set the input box back to empty
-                    let ref=`<a href="mailto:${inbox.val}">sent</a>`
+                
            
                     setTimeout(()=>{
                         

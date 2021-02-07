@@ -26,7 +26,7 @@ const More=()=> {
     let [forth_reply , setForth_reply ]=useState();
     let [last , setLast]=useState()
     //to set the loading 
-    let [loading , setLoading]=useState('')
+    let [loading ]=useState('') //it has set setLoading before 
     const userDate=()=>{
         fetch('https://dev.to/api/articles').then( data => data.json())
         .then(dev =>{
