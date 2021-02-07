@@ -212,7 +212,9 @@ const Bot=()=>{
                     <Container>
                         <div className="ova">
                         <div className="botMsg">
-                            <small>Hello i am BALEN your new friend , so what do you want me to do for you today?</small>
+                            <small>Hello i am BALEN your new friend , so what do you want me to do for you today?
+                                if you click a button and i did not respond after 2 seconds , kindly refresh the page and click the button again 
+                            </small>
                         </div>
                             <div className='go'>
                             <div>
